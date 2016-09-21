@@ -7,7 +7,7 @@ public class game
 		static int row;
 		static int col;
 		static String[][] grid=new String[2][2];
-		static String[][] blankGrid={{" ", " ", " ", " "}, {" ", " ", " ", " "}, {" ", " ", " ", " "}, {" ", " ", " ", " "}};
+		static String[][] blankGrid={{" ", " "}, {" ", " "}};
 		public static void main(String[] args)
 			{	
 				boolean[][] shown={{false, false, false, false}, {false, false, false, false}, {false, false, false, false}, {false, false, false, false}};
