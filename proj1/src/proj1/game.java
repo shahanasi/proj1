@@ -6,59 +6,23 @@ public class game
 		static String coordinates;
 		static int row;
 		static int col;
-		static String[][] grid=new String[4][4];
+		static String[][] grid=new String[2][2];
 		static String[][] blankGrid={{" ", " ", " ", " "}, {" ", " ", " ", " "}, {" ", " ", " ", " "}, {" ", " ", " ", " "}};
 		public static void main(String[] args)
-			{
-				
-				//sets answer positions
-				int answers=(int)(Math.random()*99)+1;
-				
-				boolean[][] shown={{false, false}, {false, false}};
-//				if(answers<25)
-//				{
-//					grid[0][0]="y";
-//					grid[0][1]="x";
-//					grid[1][0]="x";
-//					grid[1][1]="y";
-//				}
-//				else if(answers<50)
-//					{
-//						grid[0][0]="y";
-//						grid[0][1]="x";
-//						grid[1][0]="y";
-//						grid[1][1]="x";
-//					}
-//				else if(answers<75)
-//				{
-//					grid[0][0]="x";
-//					grid[0][1]="y";
-//					grid[1][0]="y";
-//					grid[1][1]="x";
-//				}
-//				else if(answers<100)
-//					{
-//						grid[0][0]="x";
-//						grid[0][1]="y";
-//						grid[1][0]="x";
-//						grid[1][1]="y";
-//					}
-//				
-//				printGrid(grid, shown);
-//				coordinatesToNumbers();
-//				printGrid(grid, shown);
+			{	
+				boolean[][] shown={{false, false, false, false}, {false, false, false, false}, {false, false, false, false}, {false, false, false, false}};
 				gridRandomizing();
 			}
 		public static void printGrid(String[][] l, boolean[][] f)
 			{
-				System.out.println("  1 2 3 4");
-				System.out.println("A  | | | |");
-				System.out.println("  --------");
-				System.out.println("B  | | | |");
-				System.out.println("  --------");
-				System.out.println("C  | | | |");
-				System.out.println("  --------");
-				System.out.println("C  | | | |");
+//				System.out.println("  1 2 3 4");
+//				System.out.println("A  | | | |");
+//				System.out.println("  --------");
+//				System.out.println("B  | | | |");
+//				System.out.println("  --------");
+//				System.out.println("C  | | | |");
+//				System.out.println("  --------");
+//				System.out.println("C  | | | |");
 				for(int i=0; i<2; i++)
 				{
 					if(i==0){
@@ -116,25 +80,25 @@ public class game
 			cards.add("y");
 			cards.add("z");
 			cards.add("z");
-			cards.add("x");
-			cards.add("x");
-			cards.add("p");
-			cards.add("p");
-			cards.add("a");
-			cards.add("a");
-			cards.add("f");
-			cards.add("f");
-			cards.add("k");
-			cards.add("k");
-			cards.add("q");
-			cards.add("q");
+//			cards.add("x");
+//			cards.add("x");
+//			cards.add("p");
+//			cards.add("p");
+//			cards.add("a");
+//			cards.add("a");
+//			cards.add("f");
+//			cards.add("f");
+//			cards.add("k");
+//			cards.add("k");
+//			cards.add("q");
+//			cards.add("q");
 			int k = 0;
-			for (int i = 0; i<4; i++)
+			for (int i = 0; i<2; i++)
 				{
-					for (int j = 0; j<4; j++)
+					for (int j = 0; j<2; j++)
 						{
 							
-							int random = (int) (Math.random()*(16 - k));
+							int random = (int) (Math.random()*(4 - k));
 							grid[i][j] = cards.get(random);
 							cards.remove(random);
 							System.out.print(grid[i][j] + " ");
@@ -142,8 +106,5 @@ public class game
 						}
 					System.out.println();
 				}
-		}
-		private static void allTrue(boolean[][] f){
-			
 		}
 	}
